@@ -1,0 +1,1 @@
+{"successful_predictions": 4111, "errors": 0, "duration_seconds": 90, "workers": 30}

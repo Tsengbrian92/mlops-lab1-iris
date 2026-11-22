@@ -1,0 +1,6 @@
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+iris-api   Deployment/iris-api   cpu: 100%/50%   1         5         1          71s
+NAME       REFERENCE             TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+iris-api   Deployment/iris-api   cpu: <unknown>/50%   1         5         2          82s
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+iris-api   Deployment/iris-api   cpu: 3%/50%   1         5         2          99s

@@ -1,0 +1,49 @@
+
+Summary:
+  Total:	120.0162 secs
+  Slowest:	3.1109 secs
+  Fastest:	0.0483 secs
+  Average:	1.9732 secs
+  Requests/sec:	7926.4800
+  
+  Total data:	11951 bytes
+  Size/request:	19 bytes
+
+Response time histogram:
+  0.048 [1]	|
+  0.355 [0]	|
+  0.661 [2]	|
+  0.967 [2]	|
+  1.273 [17]	|■■■
+  1.580 [77]	|■■■■■■■■■■■■■■■
+  1.886 [145]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  2.192 [207]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  2.498 [119]	|■■■■■■■■■■■■■■■■■■■■■■■
+  2.805 [47]	|■■■■■■■■■
+  3.111 [12]	|■■
+
+
+Latency distribution:
+  10%% in 1.4580 secs
+  25%% in 1.7059 secs
+  50%% in 1.9900 secs
+  75%% in 2.2233 secs
+  90%% in 2.4892 secs
+  95%% in 2.6110 secs
+  99%% in 2.8637 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0005 secs, 0.0000 secs, 0.0072 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0001 secs, 0.0000 secs, 0.0069 secs
+  resp wait:	1.9607 secs, 0.0377 secs, 3.1108 secs
+  resp read:	0.0116 secs, 0.0000 secs, 0.2060 secs
+
+Status code distribution:
+  [200]	629 responses
+
+Error distribution:
+  [50]	Post "http://127.0.0.1:8081/predict": EOF
+  [1213]	Post "http://127.0.0.1:8081/predict": dial tcp 127.0.0.1:8081: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+  [949414]	Post "http://127.0.0.1:8081/predict": dial tcp 127.0.0.1:8081: connectex: No connection could be made because the target machine actively refused it.
+

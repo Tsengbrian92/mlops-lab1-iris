@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8"><title>HPA scaling execution evidence</title><style>body{background:#101820;color:#edf4fa;font:16px system-ui;margin:32px}h1{margin-bottom:8px}p{color:#b8c7d6}h2{font-size:18px;color:#84dcad;margin:24px 0 10px}pre{font:14px Consolas,monospace;background:#1b2935;padding:16px;border:1px solid #3e5364;white-space:pre-wrap}section{break-inside:avoid}</style><h1>Lab 1 — HPA Scaling</h1><p>Saved execution output · 2026-11-22 · kind-mlops-lab1 · CPU target 50% · 1–5 replicas<br>This page displays original saved command output, not a live cluster view.</p><section><h2>Before load: 1 replica</h2><pre>NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+iris-api   Deployment/iris-api   cpu: 3%/50%   1         5         1          47s
+</pre></section><section><h2>During load: automatic scale to 5</h2><pre>NAME       REFERENCE             TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+iris-api   Deployment/iris-api   cpu: &lt;unknown&gt;/50%   1         5         2          5m11s
+2026-11-22T11:20:21.2399241+08:00
+NAME       REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+iris-api   Deployment/iris-api   cpu: 83%/50%   1         5         2          5m24s
+2026-11-22T11:20:41.3951660+08:00
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+iris-api   Deployment/iris-api   cpu: 402%/50%   1         5         2          5m44s
+2026-11-22T11:21:01.5950406+08:00
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+iris-api   Deployment/iris-api   cpu: 394%/50%   1         5         5          6m4s
+2026-11-22T11:21:21.7590913+08:00
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+iris-api   Deployment/iris-api   cpu: 277%/50%   1         5         5          6m24s
+</pre></section><section><h2>Completed load test</h2><pre>{&quot;successful_predictions&quot;: 4111, &quot;errors&quot;: 0, &quot;duration_seconds&quot;: 90, &quot;workers&quot;: 30}
+</pre></section><section><h2>Pods after load: no restarts</h2><pre>NAME                        READY   STATUS      RESTARTS   AGE
+iris-api-59f6cd6ffd-2jnj6   1/1     Running     0          76s
+iris-api-59f6cd6ffd-mln6s   1/1     Running     0          76s
+iris-api-59f6cd6ffd-ppqmq   1/1     Running     0          61s
+iris-api-59f6cd6ffd-rfz7g   1/1     Running     0          2m16s
+iris-api-59f6cd6ffd-w8qw8   1/1     Running     0          2m46s
+iris-load-test-qzl89        0/1     Completed   0          109s
+</pre></section>

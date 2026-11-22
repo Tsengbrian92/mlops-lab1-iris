@@ -1,0 +1,7 @@
+NAME                        READY   STATUS      RESTARTS   AGE
+iris-api-59f6cd6ffd-2jnj6   1/1     Running     0          76s
+iris-api-59f6cd6ffd-mln6s   1/1     Running     0          76s
+iris-api-59f6cd6ffd-ppqmq   1/1     Running     0          61s
+iris-api-59f6cd6ffd-rfz7g   1/1     Running     0          2m16s
+iris-api-59f6cd6ffd-w8qw8   1/1     Running     0          2m46s
+iris-load-test-qzl89        0/1     Completed   0          109s
